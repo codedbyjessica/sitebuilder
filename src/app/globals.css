@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+*:hover {
+	transition: all 0.2s ease;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;	
+	font-size: 16px;
+}
+
+h1, h2, h4{
+	text-transform: uppercase;
+}
+
+h1{
+	font-size: 40px;
+	letter-spacing: 1px;
+}
+
+h2{
+	font-size: 26px;
+	line-height: 26px;
+	letter-spacing: 2px;
+	margin-bottom: 24px;
+}
+
+h3{
+	font-size: 24px;
+	line-height: 24px;
+	letter-spacing: 2px;
+	margin-bottom: 24px;
+}
+
+h4{
+	font-size: 20px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+
+h5{
+	font-size: 20px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+.two-col .columns-wrapper .column{
+	width: calc(50% - 20px);
+}
+
+.three-col .columns-wrapper .column{
+	width: calc(33% - 20px);
+}
+
+.four-col .columns-wrapper .column{
+	width: calc(25% - 20px);
+}
+
+
+@media (max-width: 768px) {
+	.two-col .columns-wrapper .column,
+	.three-col .columns-wrapper .column,
+	.four-col .columns-wrapper .column {
+		width: 100%;
+	}
+}
